@@ -1,0 +1,2522 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Symbol.ResourceCoordination</name>
+    </assembly>
+    <members>
+        <member name="T:Symbol.ResourceCoordination.TriggerID">
+            <summary>
+            Defines all triggers that can be available in the system.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TriggerID.TRIGGER1">
+            <summary>
+            Trigger ID #1.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TriggerID.TRIGGER2">
+            <summary>
+            Trigger ID #2.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TriggerID.TRIGGER3">
+            <summary>
+            Trigger ID #3.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TriggerID.TRIGGER4">
+            <summary>
+            Trigger ID #4.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TriggerID.TRIGGER5">
+            <summary>
+            Trigger ID #5.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TriggerID.TRIGGER6">
+            <summary>
+            Trigger ID #6.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TriggerID.TRIGGER7">
+            <summary>
+            Trigger ID #7.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TriggerID.EXTERNAL_TRIGGER">
+            <summary>
+            External trigger.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TriggerID.ALL_TRIGGERS">
+            <summary>
+            All Trigger IDs
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.TriggerState">
+            <summary>
+            Defines the different states of a trigger.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TriggerState.STAGE1">
+            <summary>
+            Trigger is in stage 1 pressed state.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TriggerState.STAGE2">
+            <summary>
+            Trigger is in stage 2 pressed state.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TriggerState.RELEASED">
+            <summary>
+            Trigger is in released state.
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.TriggerDevice">
+            <summary>
+            The Symbol.ResourceCoordination.TriggerDevice class provides access to the triggers
+            available in the system.
+            </summary>
+            <remarks>
+            The TriggerDevice class provides an excellent starting point for applications
+            that wish to gain more information about all the triggers available. The
+            AvailableTriggers property provides a static Device array with each entry mapping to
+            available trigger buttons. Each entry contains information about the hardware and 
+            can also be used to construct a <see cref="T:Symbol.ResourceCoordination.Trigger"/>
+            object. This is the recommended method for instantiating Trigger  objects.
+            </remarks>
+        </member>
+        <member name="M:Symbol.ResourceCoordination.TriggerDevice.#ctor(Symbol.ResourceCoordination.TriggerID,Symbol.ResourceCoordination.TriggerState[])">
+            <summary>
+            Constructs a TriggerDevice instance using an ID and a list of available stages.
+            </summary>
+            <param name="id">A TriggerID enumerated type that defines the trigger in the
+            system.</param>
+            <param name="stages">A TriggerState enumerated type array that contains the 
+            triggers supported stages.</param>
+        </member>
+        <member name="M:Symbol.ResourceCoordination.TriggerDevice.#ctor(Symbol.ResourceCoordination.TriggerID,System.Collections.ArrayList)">
+            <summary>
+            Constructs a TriggerDevice instance using an ID and a list of available stages.
+            </summary>
+            <param name="id">A TriggerID enumerated type that defines the trigger in the
+            system.</param>
+            <param name="stages">A ArrayList that contains the triggers supported
+            stages.</param>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.TriggerDevice.ID">
+            <summary>
+            Returns the ID of the trigger device.
+            </summary>
+            <value>
+            A TriggerID enumerated type member that indicates the ID of the trigger.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.TriggerDevice.AvailableStages">
+            <summary>
+            Gets a list of stages available to the trigger device.
+            </summary>
+            <value>
+            An array of TriggerStates that provide information about the stages that the 
+            trigger supports.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.TriggerDevice.AvailableTriggers">
+            <summary>
+            Gets a list of triggers available on the system.
+            </summary>
+            <remarks>
+            The AvailableTriggers property interrogates the system for information about the 
+            available triggers. It is recommended that TriggerDevice objects obtained from 
+            this array be used to construct Trigger objects.
+            </remarks>
+            <value>
+            An array of TriggerDevice objects the contain information about all available 
+            triggers in the system.
+            </value>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.TerminalTypes">
+            <summary>
+            Defines possible Terminals Types
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.NONE">
+            <summary>
+            No terminal type
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.GUN">
+            <summary>
+            Gun Form factor terminal
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.BRICK">
+            <summary>
+            Brick Form factor terminal
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.SHORT">
+            <summary>
+            Short Form factor terminal
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.NITRO">
+            <summary>
+            Nitro Board
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC3000_CORE_42">
+            <summary>
+            MC3000 CE 4.2 Core 
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC3000_PRO_42">
+            <summary>
+            MC3000 CE 4.2 Professional
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC3000_CORE_50">
+            <summary>
+            MC3000 CE 5.0 Core
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC3000_PRO_50">
+            <summary>
+            MC3000 CE 5.0 Professional
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC3000_WM_61">
+            <summary>
+            MC3000 Windows Mobile 6.1
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC3100_PRO_60">
+            <summary>
+            MC3100 Windows Mobile 6.0 Professional
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC3100_WM_61">
+            <summary>
+            MC3100 Windows Mobile 6.1
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC3100_PRO_60_GUN">
+            <summary>
+            MC3100 Windows Mobile 6.0 professional (gun)
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC3100_PRO_60_ROTATE">
+            <summary>
+            MC3100 Windows Mobile 6.0 professional (rotate)
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC3100_PRO_60_STRAIGHT_SHOOTER">
+            <summary>
+            MC3100 Windows Mobile 6.0 professional (straight shooter)
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC3100_WM_61_GUN">
+            <summary>
+            MC3100 Windows Mobile 6.0 (gun)
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC3100_WM_61_ROTATE">
+            <summary>
+            MC3100 Windows Mobile 6.0 (rotate)
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC3100_WM_61_STRAIGHT_SHOOTER">
+            <summary>
+            MC3100 Windows Mobile 6.0 (straight shooter)
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC3100_WM_65_GUN">
+            <summary>
+            MC3100 Windows Mobile 6.5 (gun)
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC3100_WM_65_ROTATE">
+            <summary>
+            MC3100 Windows Mobile 6.5 (rotate)
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC3100_WM_65_STRAIGHT_SHOOTER">
+            <summary>
+            MC3100 Windows Mobile 6.5 (straight shooter)
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC1000_CORE_42_ENG">
+            <summary>
+            MC1000 CE 4.2 Core
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC1000_CORE_42_CHS">
+            <summary>
+            MC1000 CE 4.2 Core Chinese
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC1000_CORE_42_KOR">
+            <summary>
+            MC1000 CE 4.2 Korean
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC1000_CORE_42_JPN">
+            <summary>
+            MC1000 CE 4.2 Japanese
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_WT4090_PRO_50_ENG">
+            <summary>
+            WT4090 CE 5.0 Professional
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_WT4070_PRO_50_ENG">
+            <summary>
+            WT4070 CE 5.0 Professional
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_WT4070_PRO_50_FRA">
+            <summary>
+            
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_WT4070_PRO_50_ITA" -->
+        <!-- Badly formed XML comment ignored for member "F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_WT4070_PRO_50_GER" -->
+        <!-- Badly formed XML comment ignored for member "F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_WT4070_PRO_50_ESN" -->
+        <!-- Badly formed XML comment ignored for member "F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_WT4070_PRO_50_CHS" -->
+        <!-- Badly formed XML comment ignored for member "F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_WT4070_PRO_50_JPN" -->
+        <!-- Badly formed XML comment ignored for member "F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_WT4070_PRO_50_KOR" -->
+        <!-- Badly formed XML comment ignored for member "F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_WT4070_PRO_50_CHT" -->
+        <!-- Badly formed XML comment ignored for member "F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_WT4090_PRO_50_FRA" -->
+        <!-- Badly formed XML comment ignored for member "F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_WT4090_PRO_50_ITA" -->
+        <!-- Badly formed XML comment ignored for member "F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_WT4090_PRO_50_GER" -->
+        <!-- Badly formed XML comment ignored for member "F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_WT4090_PRO_50_ESN" -->
+        <!-- Badly formed XML comment ignored for member "F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_WT4090_PRO_50_CHS" -->
+        <!-- Badly formed XML comment ignored for member "F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_WT4090_PRO_50_JPN" -->
+        <!-- Badly formed XML comment ignored for member "F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_WT4090_PRO_50_KOR" -->
+        <!-- Badly formed XML comment ignored for member "F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_WT4090_PRO_50_CHT" -->
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC55_WM_60">
+            <summary>
+            MC55 WM 6.0
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC55_WM_61">
+            <summary>
+            MC55 WM 6.1
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC55_CE_60">
+            <summary>
+            MC55 Windows CE 6.0
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC55A_WM_65">
+            <summary>
+            MC55A WM 6.5
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC55A_CE_60">
+            <summary>
+            MC55A Windows CE 6.0
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_ASPEN_WM_60">
+            <summary>
+            ASPEN WM 6.0 (ASPEN is the code name for VC6090)
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_VC6090_WM_60">
+            <summary>
+            VC6090 WM 6.0 (VC6090 is the product name for ASPEN)
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_ASPEN_WM_61">
+            <summary>
+            ASPEN WM 6.1 (ASPEN is the code name for VC6090)
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_VC6090_WM_61">
+            <summary>
+            VC6090 WM 6.1 (VC6090 is the product name for ASPEN)
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC70_WM_50">
+            <summary>
+            MC70 WM 5.0
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC75_WM_60">
+            <summary>
+            MC75 WM 6.0
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC75_PRO_60">
+            <summary>
+            MC75 WM 6.0 Professional
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC75_WM_61">
+            <summary>
+            MC75 WM 6.1
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC75A_WM_65">
+            <summary>
+            MC75 WM 6.5
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_UCA_DEV">
+            <summary>
+            UCA DEV
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_UCA_EVT1">
+            <summary>
+            UCA EVT1
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_UCA_H323">
+            <summary>
+            UCA H323
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_UCA_SIP_H323">
+            <summary>
+            UCA SIP H323
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_UCA_SCCP">
+            <summary>
+            UCA SCCP
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_UCA">
+            <summary>
+            UCA
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_STEALTH">
+            <summary>
+            STEALTH
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MC17">
+            <summary>
+            MC17
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MK500">
+            <summary>
+            MK500
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.CONFIG_TYPE_TERMINAL_MK4000">
+            <summary>
+            MK4000
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.EMULATOR">
+            <summary>
+            Emulation
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.MPA_1_5">
+            <summary>
+            MPA 1.5
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.MPA2_WM_61">
+            <summary>
+            MPA 2.0 WM 6.1
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.MPA2_CE_60">
+            <summary>
+            MPA 2.0 Windows CE 6.0
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.MC95_WM_61">
+            <summary>
+            MC95XX WM 6.1
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.ES400_WM_65">
+            <summary>
+            ES400 WM 6.5
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TerminalTypes.MC65_WM_65">
+            <summary>
+            MC65 WM 6.5
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.DisplayTypes">
+            <summary>
+            Defines possible Display Types
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.NONE">
+            <summary>
+            No diplay
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.CONFIG_TYPE_DISPLAY_PDT9000_COLOR">
+            <summary>
+            Color display, portrait 240x320
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.CONFIG_TYPE_DISPLAY_PDT9000_BW">
+            <summary>
+            Mono display, portrait 240x320
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.PDT9000_PPD_BW">
+            <summary>
+            Mono display, portrait 240x320
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.LQ038Q7DB03_COLOR">
+            <summary>
+            Color display, portrait 240x320
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.EW50301FLWP_MONO">
+            <summary>
+            Mono display, portrait 240x320
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.LQ039Q2DS53_COLOR">
+            <summary>
+            Color display, portrait 240x320
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.LQ035Q2DD54_COLOR">
+            <summary>
+            Color display, portrait 240x320
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.PALM160X160_MONO">
+            <summary>
+            Mono plam size display, 160x160
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.LQ030B7DD01_COLOR_324">
+            <summary>
+            Color display, square 324x324
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.ES50512FLWP_MONO_320">
+            <summary>
+            Mono display, square 320x320
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.ES50528FLWP_MONO_240">
+            <summary>
+            Mono display, square, 240x240
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.LQ121S1DG41_COLOR_VGA">
+            <summary>
+            Color VGA, 800x600
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.LQ121S1DG41_COLOR_HALF_VGA">
+            <summary>
+            Color Half VGA, 800x320
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.LTD121C30S_COLOR_VGA">
+            <summary>
+            Toshiba Color VGA, 800x600
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.G121SN01_COLOR_VGA">
+            <summary>
+            AUO Color VGA, 800x600
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.LQ035Q7DH02_COLOR">
+            <summary>
+            Color display, portrait 240x320
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.LTP283QV_COLOR">
+            <summary>
+            Samsung Color QVGA, portrait 240x320
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.LS037V7DW01_COLOR_VGA">
+            <summary>
+            Sharp Color VGA, portrait 480x640
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.TD037MHEA1_COLOR_VGA">
+            <summary>
+            TPO Color VGA, portrait 480x640
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.ST7565R_MONO">
+            <summary>
+            WIntek Mono 96x64
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.TX07D04VM_COLOR">
+            <summary>
+            Hitachi Color QVGA, portrait 240x320
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.CONFIG_TYPE_DISPLAY_LS037V7DW01_COLOR_QVGA">
+            <summary>
+            Sharp Color VGA, in LowRes portrait 240x320
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.CONFIG_TYPE_DISPLAY_TD037MHEA1_COLOR_QVGA">
+            <summary>
+            TPO Color VGA, in LowRes portrait 240x320
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.CONFIG_TYPE_DISPLAY_A035QN02_COLOR_QVGA">
+            <summary>
+            TPO Color QVGA, 320x240 Landscape
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.TD035SHED1_COLOR_VGA">
+            <summary>
+            TPO (aka TP076 on MC75) Color VGA, portrait 480x640
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.CONFIG_TYPE_DISPLAY_TD035SHED1_COLOR_QVGA">
+            <summary>
+            TPO same as Color VGA but used as QVGA, portrait 320x240
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.TD028TTEA1_COLOR">
+            <summary>
+            Color QVGA, portrait 240x320
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.LH350V01_COLOR_VGA">
+            <summary>
+            LG Phillips Color VGA, portrait 480x640
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.LH350V01_COLOR_QVGA">
+            <summary>
+            LG Phillips Color QVGA, portrait 240x320
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.LH370V01_COLOR_VGA">
+            <summary>
+            LG Phillips LH370V01 3.7" Color VGA, portrait 480x640
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.L5F30981T00_COLOR_320">
+            <summary>
+            Epson square color display 320x320
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.LH370V01_COLOR_QVGA">
+            <summary>
+            LG Phillips LH370V01 3.7" Color QVGA portrait 240x320
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.LMS350CC01_COLOR_VGA">
+            <summary>
+            Samsung Pentile display VGA
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.LMS350CC01_COLOR_QVGA">
+            <summary>
+            Samsung Pentile display QVGA
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DisplayTypes.LTA065B0D0F_COLOR">
+            <summary>
+            Color TFT 6.5" for ASPEN
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.KeyboardTypes">
+            <summary>
+            Defines possible Keyboard Types
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.NONE">
+            <summary>
+            No Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.KEYS_53">
+            <summary>
+            53-Key Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.KEY_43">
+            <summary>
+            43-Key Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.KEYS_53_VT">
+            <summary>
+            53 VT Emulation Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.KEYS_53_3270">
+            <summary>
+            53 3270 Emulation Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.KEYS_53_5250">
+            <summary>
+            53 5250 Emulation Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.PDT9000_28KEY">
+            <summary>
+            PDT9000 28-Key Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.KEY_3801">
+            <summary>
+            Numeric Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.KEY_3802">
+            <summary>
+            Alpha Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.PDT9000_53KEY_THD">
+            <summary>
+            THD 53 key
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.PDT9000_28KEY_COKE">
+            <summary>
+            Coke 28Key
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC95_ALPHA_NUMERIC">
+            <summary>
+            MC95XX Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC95_TELE_NUMERIC_BIO">
+            <summary>
+            MC95XX Tele Numeric Bio Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC95_TELE_NUMERIC">
+            <summary>
+            MC95XX Tele Numeric Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC95_LEGACY_NUMERIC">
+            <summary>
+            MC95XX Legacy Numeric Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC95_ALPHA_PRIMARY">
+            <summary>
+            MC95XX Alpha Primary Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC95_ALPHA_FEDEXGRND">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC95_ALPHA_FEDEX">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.PDT9000_20KEY">
+            <summary>
+            PDT9000 20-Key Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC3000_28KEY">
+            <summary>
+            MC3000 28-Key Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC3000_38KEY">
+            <summary>
+            MC3000 38-Key Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC3000_48KEY">
+            <summary>
+            MC3000 48-Key Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC3000_28KEY_FP">
+            <summary>
+            MC3000 28-Key Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC3000_20KEY">
+            <summary>
+            MC3000 20-Key Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC70_NUMERICKEY">
+            <summary>
+            MC70 Numeric Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC70_QWERTYKEY">
+            <summary>
+            MC70 Qwerty Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.WT4090_TRPLTAP">
+            <summary>
+            WT4090 TRPLTAP
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.WT4090_DBLTAP">
+            <summary>
+            WT4090 DBLTAP
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.URA_SMALL_DEV">
+            <summary>
+            URA Small Dev
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.URA_BIG_DEV">
+            <summary>
+            URA Big Dev
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.URA_SMALL">
+            <summary>
+            URA Small
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.URA_BIG">
+            <summary>
+            URA Big
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.STEALTH">
+            <summary>
+            Stealth
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC17_KEYBOARD">
+            <summary>
+            MC17 Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC55_QWERTYKEY">
+            <summary>
+            MC 55 Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC55_AZERTYKEY">
+            <summary>
+            MC 55 Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC55_QWERTZKEY">
+            <summary>
+            MC 55 Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC55_NUMERICKEY">
+            <summary>
+            MC 55 Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC55_PIMKEY">
+            <summary>
+            MC 55 Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC65_QWERTYKEY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC65_AZERTYKEY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC65_QWERTZKEY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC65_NUMERICKEY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC65_PIMKEY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MK500_KEYBOARD">
+            <summary>
+            MK500 Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC75_NUMERICKEY">
+            <summary>
+            MC75 Numeric Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC75_QWERTYKEY">
+            <summary>
+            MC75 Qwerty Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC75_AZERTYKEY">
+            <summary>
+            MC75 Azert Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC75_QWERTZKEY">
+            <summary>
+            MC75 Qwertz Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MC75_DSDKEY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.ASPEN_69KEY">
+            <summary>
+            ASPEN (69 key) keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.ES400_QWERTYKEY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.ES400_AZERTYKEY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.ES400_QWERTZKEY">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MATRIX">
+            <summary>
+            Matrix Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.MATRIX_REMAP">
+            <summary>
+            Matrix Remap Keyboard
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.KeyboardTypes.DYNAMIC">
+            <summary>
+            Dynamic Keyboard
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.UARTTypes">
+            <summary>
+            Defines possible External UART Types
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.UARTTypes.NONE">
+            <summary>
+            No External UART
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.UARTTypes.EXT_DUART">
+            <summary>
+            External UART available
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.AudioTypes">
+            <summary>
+            Defines possible Audio Types
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.AudioTypes.NONE">
+            <summary>
+            No audio available
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.AudioTypes.BEEPER">
+            <summary>
+            Beeper only terminal
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.AudioTypes.CODEC">
+            <summary>
+            Speaker only terminal
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.AudioTypes.CODEC_BEEPER">
+            <summary>
+            Both speaker and beeper are supported
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.AudioTypes.SPEAKER_ALL">
+            <summary>
+            Audio speaker with Jack/Mic/Rcvr
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.AudioTypes.SPEAKER_NO_RCVR">
+            <summary>
+            Audio speaker with Jack/Mic
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.AudioTypes.SPEAKER_ONLY">
+            <summary>
+            Audio speaker only
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.AudioTypes.AUDIO_SPEAKER_NO_JACK">
+            <summary>
+            Audio speaker with Jack/Rcvr
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.TouchTypes">
+            <summary>
+            Defines possible Touch Screen types
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TouchTypes.NONE">
+            <summary>
+            No Touch screen 
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TouchTypes.TYPE0">
+            <summary>
+            Touch Screen available
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TouchTypes.PRODUCTION">
+            <summary>
+            Touch Screen available
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TouchTypes.CODEC">
+            <summary>
+            Touch Screen available
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.TouchTypes.PROCESSOR">
+            <summary>
+            MSM7627 based QC chipset
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.BluetoothTypes">
+            <summary>
+            Defines possible Bluetooth Types
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.BluetoothTypes.NONE">
+            <summary>
+            No Bluetooth available
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.BluetoothTypes.SNAPPER">
+            <summary>
+            Snapper Bluetooth module
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.BluetoothTypes.EYSNDYAXX">
+            <summary>
+            Taiyo Yuden Bluetooth Module
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.BluetoothTypes.BCM">
+            <summary>
+            BCM Bluetooth module
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.BluetoothTypes.BCM2046">
+            <summary>
+            Bluetooth module from BroadCom
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.BluetoothTypes.BTS4025">
+            <summary>
+            Qualcomm BT module
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.USBTypes">
+            <summary>
+            Defines possible USB Types
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.USBTypes.NONE">
+            <summary>
+            No USB
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.USBTypes.TYPE0">
+            <summary>
+            USB available.
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.DSPTypes">
+            <summary>
+            Defines possible DSP Types
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DSPTypes.NONE">
+            <summary>
+            NO DSP
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.DSPTypes.TYPE0">
+            <summary>
+            DSP available
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.ScannerTypes">
+            <summary>
+            Defines possible Scanner Types
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ScannerTypes.NONE">
+            <summary>
+            No Scanner available
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ScannerTypes.SE1200HP">
+            <summary>
+            1D undecoded scan engine
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ScannerTypes.SE1224">
+            <summary>
+            1D SSI decoded scan engine
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ScannerTypes.SE2200">
+            <summary>
+            2D undecoded scan engine
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ScannerTypes.PICOIMAGER">
+            <summary>
+            Imager
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ScannerTypes.SE1524">
+            <summary>
+            Lorax ER
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ScannerTypes.SE923">
+            <summary>
+            1D SSI decoded scan engine
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ScannerTypes.SE824">
+            <summary>
+            1D SSI decoded scan engine
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ScannerTypes.SE950">
+            <summary>
+            1D undecoded scan engine - QS interface
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ScannerTypes.SE955">
+            <summary>
+            SSI decoded scan engine
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ScannerTypes.PICOIMAGER_HD">
+            <summary>
+            High Density Pico Imager
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ScannerTypes.PICOIMAGER_DOT">
+            <summary>
+            Pico Imager with Dot
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ScannerTypes.BLOCKBUSTER">
+            <summary>
+            Block Buster Imager
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ScannerTypes.LONG_RANGE_IMAGER">
+            <summary>
+            Long range Imager
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ScannerTypes.SCANNER_SE960">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ScannerTypes.SCANNER_SE4500HD">
+            <summary>
+            Block Buster Imager - SE4500HD
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ScannerTypes.EMULATION">
+            <summary>
+            Scanning emulation only
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ScannerTypes.SCANNER_SE4500DL">
+            <summary>
+            Block Buster Imager - SE4500DL
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.CCDTypes">
+            <summary>
+            Defines possible Camera device types
+            </summary>
+            <remarks>Deprecated. Use CameraTypes instead.</remarks>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.CCDTypes.NONE">
+            <summary>
+            No Camera device
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.CCDTypes.CAMERA">
+            <summary>
+            Camera available
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.CameraTypes">
+            <summary>
+            Defines possible Camera device types
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.CameraTypes.NONE">
+            <summary>
+            No Camera device
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.CameraTypes.TYPE0">
+            <summary>
+            Camera available
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.CameraTypes.A2MP_AF_FL">
+            <summary>
+            A 2MP_AF_FL Camera available
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.CameraTypes.A2MP_AF">
+            <summary>
+            A 2MP_AF Camera available
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.CameraTypes.A3MPAF_F0">
+            <summary>
+            A 3MPAF_F0 Camera available
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.CameraTypes.A3MPAF_J0">
+            <summary>
+            A 3MPAF_J0 Camera available
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.CameraTypes.A2MPAF_J0">
+            <summary>
+            A 2MPAF_J0 Camera available
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.CameraTypes.CAMERA_3MPAF_J1">
+            <summary>
+            A 3MPAF_J1 Camera available
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.CameraTypes.CAMERA_3MPAF_J2">
+            <summary>
+            A 3MPAF_J2 Camera available
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.WLANTypes">
+            <summary>
+            Defines possible WLAN Types
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WLANTypes.NONE">
+            <summary>
+            No WLAN 
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WLANTypes.ONBOARD">
+            <summary>
+            Onboard WLAN 
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WLANTypes.FH">
+            <summary>
+            Frequency Hopping WLAN 
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WLANTypes.DS">
+            <summary>
+            Direct Sequence WLAN 
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WLANTypes.CISCO">
+            <summary>
+            Cisco WLAN 
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WLANTypes.PRISM">
+            <summary>
+            Prism WLAN
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WLANTypes.PHOTON">
+            <summary>
+            Photon 802.11 bg WLAN
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WLANTypes.PHOTON_802_11_BG">
+            <summary>
+            Photon 802.11 bg WLAN
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WLANTypes.PHOTON_802_11_BGA">
+            <summary>
+            Photon 082.11 bga WLAN
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WLANTypes.JEDI_802_11_BG">
+            <summary>
+            JEDI 802.11 bg WLAN
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WLANTypes.JEDI_802_11_BGA">
+            <summary>
+            JEDI 802.11 bga WLAN
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WLANTypes.HORNET_802_11_BGA">
+            <summary>
+            HORNET 802.11 bga WLAN
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.WANTypes">
+            <summary>
+            Defines possible WAN Types
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.NONE">
+            <summary>
+            No WAN available
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.G20">
+            <summary>
+            Motorola G20 modem available
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.C18">
+            <summary>
+            Motorola C18 modem available
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.MC46_GPRS_850">
+            <summary>
+            MC46_GPRS_850
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.CDMA_VERIZON">
+            <summary>
+            CDMA_VERIZON
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.CDMA_BELL_MOBILITY">
+            <summary>
+            CDMA_BELL_MOBILITY
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.CDMA_WESTERN_WIRELESS">
+            <summary>
+            CDMA_WESTERN_WIRELESS
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.CDMA_TELUS">
+            <summary>
+            CDMA_TELUS
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.CDMA_MOBILENET">
+            <summary>
+            CDMA_MOBILENET
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.CDMA_SK_TELECOM">
+            <summary>
+            CDMA_SK_TELECOM
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.CDMA_NEW_ZEALAND_MOBILE">
+            <summary>
+            CDMA_NEW_ZEALAND_MOBILE
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.CDMA_TELSTRA">
+            <summary>
+            CDMA_TELSTRA
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.CDMA_CHINA_UNICOM">
+            <summary>
+            CDMA_CHINA_UNICOM
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.NEXTEL_IDEN">
+            <summary>
+            NEXTEL_IDEN
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.WAN_MC75">
+            <summary>
+            WAN_MC75
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.WAN_EVDO">
+            <summary>
+            WAN_EVDO
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.IDEN_SOUTHERNLINC">
+            <summary>
+            IDEN_SOUTHERNLINC
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.IDEN_KTPOWERTEL">
+            <summary>
+            IDEN_KTPOWERTEL
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.HSDPA_HC25">
+            <summary>
+            HSDPA_HC25
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.EVDO_MC5725">
+            <summary>
+            EVDO_MC5725
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.HSPA_MC8790">
+            <summary>
+            HSPA_MC8790
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.EVDO_MC5727">
+            <summary>
+            EVDO_MC5727
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.HSDPA_HC28">
+            <summary>
+            HSDPA_HC28
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.GSM">
+            <summary>
+            GSM
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.MSM7627_HSDPA_EVDO">
+            <summary>
+            MSM7627_HSDPA_EVDO
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.CDMA">
+            <summary>
+            CDMA
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.GOBI">
+            <summary>
+            Gobi
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.WANTypes.DYNAMIC">
+            <summary>
+            Dynamic
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.GPSType">
+            <summary>
+            Define Possible GPS Types
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.GPSType.NONE">
+            <summary>
+            No GPA Available 
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.GPSType.GSC3F_LP">
+            <summary>
+            GPS Available (The same as GPS_GSC3F_LP.)
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.GPSType.GPS_GSC3F_LP">
+            <summary>
+            GPS Available (The same as GSC3F_LP.)
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.GPSType.GPS_QC">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.HFRFIDTypes">
+            <summary>
+            Define Possible HF RFID Types
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.HFRFIDTypes.NONE">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.HFRFIDTypes.NXP_PN532">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.HFRFIDTypes.NXP_PN544">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.UHFRFIDTypes">
+            <summary>
+            Define Possible UHF RFID Types
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.UHFRFIDTypes.NONE">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.BiometricsTypes">
+            <summary>
+            Define Possible Biometrics Types
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.BiometricsTypes.NONE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.BiometricsTypes.ATRUA">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.BiometricsTypes.UPEK">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.BiometricsTypes.AUTHENTEC">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.ISTTypes">
+            <summary>
+            Define Possible IST Types
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ISTTypes.NONE">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ISTTypes.IST_3G_KIONIX">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ISTTypes.IST_3G_BOSCH">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ISTTypes.IST_2G_BOSCH">
+            <summary>
+            MC65, ES400
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.RegionCodes">
+            <summary>
+            Define Possible Region Codes.
+            Will not list the individual country code but it will begin with 0x8xxx:xxxx.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.RegionCodes.WW">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.RegionCodes.ROW">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.LightSensorTypes">
+            <summary>
+            Define Possible Light Sensor Types
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.LightSensorTypes.NONE">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.LightSensorTypes.AL3000_LITEON">
+            <summary>
+            MC65
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.LightSensorTypes.AL3002_LITEON">
+            <summary>
+            ES400
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.HolsterTypes">
+            <summary>
+            Define Possible Holster Types
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.HolsterTypes.NONE">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.HolsterTypes.SEIKO">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.NAVPadTypes">
+            <summary>
+            Define Possible NAV Pad Types
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.NAVPadTypes.NONE">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.NAVPadTypes.AVAGO">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.CompassTypes">
+            <summary>
+            Define Possible Compass Types
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.CompassTypes.NONE">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.CompassTypes.AMI304">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.Version">
+            <summary>
+            The Symbol.ResourceCoordination Version class.
+            </summary>
+        </member>
+        <member name="M:Symbol.ResourceCoordination.Version.#ctor">
+            <summary>
+            Default ResourceCoordination Version constructor.
+            </summary>
+            <remarks>
+            Normally called by the class library and returned by the 
+            TerminalInfo.ResCoordVersion property.
+            </remarks>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.Version.CAPIVersion">
+            <summary>
+            Gets the CAPI version of resource coordinator.
+            </summary>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.Version.AssemblyVersion">
+            <summary>
+            Gets the version of this assembly.
+            </summary>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.Version.ResCoordVersion">
+            <summary>
+            Gets the version of resource coordinator driver.
+            </summary>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.Version.UUIDVersion">
+            <summary>
+            Gets the version of UUID.
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.RegisteredTriggerInfo">
+            <summary>
+            A structure that contains information about an exclusively registered trigger
+            and its stage. 
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.RegisteredTriggerInfo.device">
+            <summary>
+            A TriggerDevice object that defines which trigger to register.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.RegisteredTriggerInfo.registeredStage">
+            <summary>
+            A TriggerState enumerated type member that defines which stage to register.
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.Trigger">
+            <summary>
+            The Trigger class provides the capability of performing actions on the trigger and 
+            obtaining information (including notification messages) about the trigger.
+            </summary>
+            <remarks>
+            The Trigger class is the primary class of the Symbol.ResourceCoordination class 
+            assembly. It provides information about the associated hardware trigger, as well as
+            the capability of registering for event notification.
+            </remarks>
+        </member>
+        <member name="M:Symbol.ResourceCoordination.Trigger.#ctor">
+            <summary>
+            Constructs a Trigger instance using the default trigger device. The
+            first available hardware trigger is used by the trigger object.
+            </summary>
+        </member>
+        <member name="M:Symbol.ResourceCoordination.Trigger.#ctor(Symbol.ResourceCoordination.TriggerDevice)">
+            <summary>
+            Constructs a Trigger instance given the specified trigger device.
+            </summary>
+            <remarks>
+            This is the recommended method for creating trigger objects.
+            </remarks>
+            <param name="device">A TriggerDevice object that defines which trigger to 
+            use.</param>
+        </member>
+        <member name="M:Symbol.ResourceCoordination.Trigger.Finalize">
+            <summary>
+            Allows a Trigger to attempt to free resources and perform other cleanup 
+            operations before it is reclaimed by garbage collection.
+            </summary>
+        </member>
+        <member name="M:Symbol.ResourceCoordination.Trigger.Dispose">
+            <summary>
+            Call this method to free any resources used by the Trigger object.
+            </summary>
+            <remarks>
+            It is recommended that this method be called when the application will no longer 
+            need the Trigger object.
+            </remarks>
+        </member>
+        <member name="M:Symbol.ResourceCoordination.Trigger.makeTriggerEventArgs(System.UInt32,System.UInt32)">
+            <summary>
+            Make a TriggerEventArgs object for the Trigger Event
+            </summary>
+            <param name="curStatus"></param>
+            <param name="prevStatus"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.Trigger.State">
+            <summary>
+            Gets the current the state of the trigger.
+            </summary>
+            <value>
+            A TriggerState enumerated type member that defines the current state of the 
+            trigger.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.Trigger.ID">
+            <summary>
+            Gets the ID of the trigger.
+            </summary>
+            <value>
+            A TriggerID enumerated type member that defines the ID of the trigger.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.Trigger.AvailableStages">
+            <summary>
+            Gets a list of stages available to this trigger.
+            </summary>
+            <value>
+            A TriggerState array that contains a list of supported states.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.Trigger.IsStage1Supported">
+            <summary>
+            Return value indicates if Stage1 is supported by this trigger.
+            </summary>
+            <value>
+            A boolean flag that specifies whether or not Stage1 is supported by the trigger.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.Trigger.IsStage2Supported">
+            <summary>
+            Return value indicates if Stage2 is supported by this trigger.
+            </summary>
+            <value>
+            A boolean flag that specifies whether or not Stage2 is supported by the trigger.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.Trigger.IsStage1InUse">
+            <summary>
+            Specifies if Stage1 of the trigger is already exclusively registered.
+            </summary>
+            <value>
+            A boolean flag that when set to true indicates that the Stage1 has been
+            exclusively registered.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.Trigger.IsStage2InUse">
+            <summary>
+            Specifies if Stage2 of the trigger is already exclusively registered.
+            </summary>
+            <value>
+            A boolean flag that when set to true indicates that the Stage2 has been
+            exclusively registered.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.Trigger.IsExclusive">
+            <summary>
+            Flag indicating that exclusive use of specified triggers is requested.
+            </summary>
+            <remarks>
+            Must be set before an event handler function is attached. 
+            </remarks>
+            <value>
+            A boolean flag the specifies the exclusive use of trigger when registered.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.Trigger.RegisteredTriggers">
+            <summary>
+            Gets information about all the triggers and stages that are exclusively 
+            registered.
+            </summary>
+            <value>
+            An array of RegisteredTriggerInfo structures. 
+            </value>
+        </member>
+        <member name="E:Symbol.ResourceCoordination.Trigger.Stage1Notify">
+            <summary>
+            Provides access to the events generated when the trigger enters the Stage1 state.
+            </summary>
+        </member>
+        <member name="E:Symbol.ResourceCoordination.Trigger.Stage2Notify">
+            <summary>
+            Provides access to the events generated when the trigger enters the Stage2 state.
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.Trigger.TriggerEventHandler">
+            <summary>
+            Delegate of the event handler of the trigger stage notify events.
+            </summary>
+            <remarks>
+            Create a delegate of this type from using method in your application with
+            the same prototype. That delegate can then be attached to the stage notification
+            events.
+            </remarks>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.TriggerEventArgs">
+            <summary>
+            Defines arguments passed with trigger stage notify events.
+            </summary>
+            <remarks>
+            The TriggerEventArgs class provides access to information about the specific 
+            notification event that occurred.
+            </remarks>
+        </member>
+        <member name="M:Symbol.ResourceCoordination.TriggerEventArgs.#ctor(Symbol.ResourceCoordination.TriggerState,Symbol.ResourceCoordination.TriggerState,Symbol.ResourceCoordination.TriggerID)">
+            <summary>
+            TriggerEventArgs constructor with settable previous state and new state.
+            </summary>
+            <remarks>
+            The TriggerEventArgs class in not normally constructed by the application. It
+            usually created by the class library and passed to the application during the
+            event notification process.
+            </remarks>
+            <param name="prevState">Denotes the prior state of the trigger.</param>
+            <param name="newState">Denotes the current state of the trigger.</param>
+            <param name="triggerID">TriggerID of the trigger related to this state change.</param>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.TriggerEventArgs.PreviousState">
+            <summary>
+            Trigger state before the event.
+            </summary>
+            <value>
+            A TriggerState enumerated type member.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.TriggerEventArgs.NewState">
+            <summary>
+            Trigger stage after the event (the current state at the time of processing).
+            </summary>
+            <value>
+            A TriggerState enumerated type member.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.TriggerEventArgs.TriggerID">
+            <summary>
+            The TriggerID of the trigger related to this state change.
+            </summary>
+            <remarks>When two triggers are pressed simultaneously, the resulting Trigger 
+            ID value could be outside the predefined set of values in the TriggerID enumeration.
+            </remarks>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.ConfigType">
+            <summary>
+            Defines the different types of configuration data that may be available.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.SCANNER">
+            <summary>
+            Scanner config data information.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.DISPLAY">
+            <summary>
+            Display config data information.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.KEYBOARD">
+            <summary>
+            Keyboard config data information.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.UART">
+            <summary>
+            UART config data information.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.TERMINAL">
+            <summary>
+            Terminal config data information.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.TRIGGER">
+            <summary>
+            Trigger config data information.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.AUDIO">
+            <summary>
+            Audio config data information.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.TOUCH">
+            <summary>
+            Touch panel config data information.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.BLUETOOTH">
+            <summary>
+            Bluetooth module config data information.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.USB">
+            <summary>
+            USB config data information.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.DSP">
+            <summary>
+            DSP config data information.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.WLAN">
+            <summary>
+            WLAN module config data information.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.S24">
+            <summary>
+            S24 module config data information.
+            </summary>
+            <remarks>Deprecated. Use WLAN instead.</remarks>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.CAMERA">
+            <summary>
+            Camera config data information.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.CCD">
+            <summary>
+            Camera config data information.
+            </summary>
+            <remarks>Deprecated. Use CAMERA instead.</remarks>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.WAN">
+            <summary>
+            WAN module config data information.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.FLASHSIZE">
+            <summary>
+            Flash size config data information.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.RAMSIZE">
+            <summary>
+            Ram size config data information.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.DECODER">
+            <summary>
+             For Internal Use
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.CONFIG_PARAM_DATA_OFFSET">
+            <summary>
+            For Internal Use (The same as DATA_OFFSET.)
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.DATA_OFFSET">
+            <summary>
+            For Internal Use (The same as CONFIG_PARAM_DATA_OFFSET.)
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.LOCALE">
+            <summary>
+            For Internal Use
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.GPS">
+            <summary>
+            GPS config Data
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.HF_RFID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.UHF_RFID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.BIOMETRICS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.IST">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.REGION_CODE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.LIGHT_SENSOR">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.HOLSTER">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.NAVPAD">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.COMPASS">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.ConfigType.FLASHVENDOR">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.TerminalInfo">
+            <summary>
+            The TerminalInfo class provides miscellaneous information about the Symbol mobile
+            device.
+            </summary>
+            <remarks>
+            When an object of TerminalInfo type is created, access is provided to the mobile device's
+            unique identifier, configuration data (if present), Electronic Serial Number (if present), 
+            Smart Battery Status (if present) and RCM version information in the underlying driver stack.
+            </remarks>
+        </member>
+        <member name="M:Symbol.ResourceCoordination.TerminalInfo.#ctor">
+            <summary>
+            Default TerminalInfo constructor.
+            </summary>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.TerminalInfo.UniqueUnitID">
+            <summary>
+            Gets the unique unit ID of the device.
+            </summary>
+            <value>
+            A byte array that contains the unique unit ID.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.TerminalInfo.ResCoordVersion">
+            <summary>
+            Returns a <see cref="T:Symbol.ResourceCoordination.Version"/> object with information about the underlying
+            RCM driver stack.
+            </summary>
+            <value>
+            A ResourceCoordination Version object.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.TerminalInfo.ConfigData">
+            <summary>
+            Returns a ConfigData object that contains information about the mobile devices
+            configuration.
+            </summary>
+            <remarks>
+            Not all devices provide configuration data. 
+            </remarks>
+            <value>
+            A ConfigData object.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.TerminalInfo.ESN">
+            <summary>
+            Gets the Electronic Serial Number of the device.
+            </summary>
+            <remarks>
+            Not all devices have an Electronic Serial Number. 
+            </remarks>
+            <value>
+            The Electronic Serial Number string.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.TerminalInfo.SmartBatteryStatus">
+            <summary>
+            Returns a <see cref="P:Symbol.ResourceCoordination.TerminalInfo.SmartBatteryStatus"/> object with the current status of 
+            the Smart Battery.
+            </summary>
+            <remarks>
+            Not all devices with Smart Batteries can provide Battery Status. Refresh 
+            method can be called on the <see cref="P:Symbol.ResourceCoordination.TerminalInfo.SmartBatteryStatus"/> object to get  
+            the most current status information.
+            </remarks>
+            <value>
+            A SmartBatteryStatus object.
+            </value>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.ConfigData">
+            <summary>
+            The ConfigData class provides information about the terminal. 
+            </summary>
+            <remarks>
+            Not all terminals provide configuration data. The configuration data (if present) can
+            be used to determine what hardware is present on the terminal.
+            </remarks>
+        </member>
+        <member name="M:Symbol.ResourceCoordination.ConfigData.#ctor">
+            <summary>
+            Default ConfigData constructor.
+            </summary>
+        </member>
+        <member name="M:Symbol.ResourceCoordination.ConfigData.GetConfigData(System.Int32)">
+            <summary>
+            A generic config data function that can take in any cfgtype and return the 
+            appropriate config data. Used to obtain config data for new config types that 
+            are not yet fully defined.
+            </summary>
+            <param name="cfgtype">A integer that specifies the type of config data to 
+            retrieve.</param>
+            <returns>An integer that contains the config data.</returns>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.SCANNER">
+            <summary>
+            Returns config data associated with scanner. 
+            </summary>
+            <value>
+            An integer that contains config data. 
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.DISPLAY">
+            <summary>
+            Returns config data associated with display.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.KEYBOARD">
+            <summary>
+            Returns config data associated with keyboard.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.UART">
+            <summary>
+            Returns config data associated with UART.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.TERMINAL">
+            <summary>
+            Returns config data associated with terminal.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.TRIGGER">
+            <summary>
+            Returns config data associated with triggers.
+            </summary>
+            <value>
+            An integer that contains config data.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.AUDIO">
+            <summary>
+            Returns config data associated with Audio.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.TOUCH">
+            <summary>
+            Returns config data associated with the Touch Panel.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.BLUETOOTH">
+            <summary>
+            Returns config data associated with Bluetooth.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.USB">
+            <summary>
+            Returns config data associated with USB.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.DSP">
+            <summary>
+            Returns config data associated with DSP.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.S24">
+            <summary>
+            Returns config data associated with Wireless Lan.
+            Deprecated. Use WLAN Property instead.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+            <remarks>Deprecated. Use WLAN Property instead.</remarks>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.WLAN">
+            <summary>
+            Returns config data associated with Wireless Lan.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.CCD">
+            <summary>
+            Returns config data associated with CCD.
+            Deprecated. Use Camera Property instead.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.CAMERA">
+            <summary>
+            Returns config data associated with Camera.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.WAN">
+            <summary>
+            Returns config data associated with WAN.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.FLASHSIZE">
+            <summary>
+            Returns Flash Size.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.RAMSIZE">
+            <summary>
+            Returns RAM Size.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.GPS">
+            <summary>
+            Returns config data associated with GPS.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.HF_RFID">
+            <summary>
+            Returns config data associated with HF RFID .
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.UHF_RFID">
+            <summary>
+            Returns config data associated with UHF RFID.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.BIOMETRICS">
+            <summary>
+            Returns config data associated with biometrics.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.IST">
+            <summary>
+            Returns config data associated with IST .
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.REGION_CODE">
+            <summary>
+            Returns config data associated with region code.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.LIGHT_SENSOR">
+            <summary>
+            Returns config data associated with light sensor.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.HOLSTER">
+            <summary>
+            Returns config data associated with holster.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.NAVPAD">
+            <summary>
+            Returns config data associated with NAV pad.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.COMPASS">
+            <summary>
+            Returns config data associated with compass.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.ConfigData.FLASHVENDOR">
+            <summary>
+            Returns Flash vendor.
+            </summary>
+            <value>
+            An integer that contains config data.
+            -1 indicates that this information is not available.
+            </value>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.MfgDate">
+            <summary>
+            MfgDate structure contains the manufacturing month, day and 
+            year of the Smart Battery.
+            </summary>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.MfgDate.Month">
+            <summary>
+            A byte containing the Manufacturing Month of the Battery.
+            </summary>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.MfgDate.Day">
+            <summary>
+            A byte containing the Manufacturing Day of the Battery.
+            </summary>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.MfgDate.Year">
+            <summary>
+            A short containing the Manufacturing Year of the Battery.
+            </summary>
+        </member>
+        <member name="T:Symbol.ResourceCoordination.SmartBatteryStatus">
+            <summary>
+            SmartBatteryStatus provides access to the Smart Battery information.
+            </summary>
+            <remarks >
+            Not all terminals provide configuration data. The Smart Battery Status (if present) can
+            be used to determine the status of the battery in the terminal. SmartBatteryStatus provides 
+            information on Charge Cycle Count, Serial Number, Symbol Part Number, Manufacturing Date 
+            and Rated Capacity.
+            </remarks>
+        </member>
+        <member name="M:Symbol.ResourceCoordination.SmartBatteryStatus.#ctor">
+            <summary>
+            Default SmartBatteryStatus constructor.
+            </summary>
+        </member>
+        <member name="M:Symbol.ResourceCoordination.SmartBatteryStatus.Refresh">
+            <summary>
+            Refreshes the Smart Battery status.
+            </summary>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.SmartBatteryStatus.BatterySerialNumber">
+            <summary>
+            Returns Battery Serial Number.
+            </summary>
+            <value>
+            A string containing the Battery Serial Number.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.SmartBatteryStatus.BatteryPartNumber">
+            <summary>
+            Returns Battery Part Number.
+            </summary>
+            <value>
+            A string containing the Battery Part Number.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.SmartBatteryStatus.ChargeCycles">
+            <summary>
+            Returns number of Battery Charge Cycles (Aggregate charge / Rated Capacity).
+            </summary>
+            <value>
+            A short containing the number of Battery Charge Cycles.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.SmartBatteryStatus.RatedCapacity">
+            <summary>
+            Returns the rated Battery Capacity in mAh.
+            </summary>
+            <value>
+            A short containing the number of Battery Capacity in mAh.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.SmartBatteryStatus.BatteryMfgDate">
+            <summary>
+            Returns a MfgDate structure containing the month, day and year the battery was manufactured.
+            </summary>
+            <value>
+            A MfgDate structure containing the month, day and year the battery was manufactured.
+            </value>
+        </member>
+        <member name="P:Symbol.ResourceCoordination.SmartBatteryStatus.StateOfHealth">
+            <summary>
+            Returns the state of health information.
+            </summary>
+            <value>
+            A numeric value indicating the battery state of health. 0x64 is healthy and 0xFE is unhealthy.
+            </value>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.RCM_VERSION_INFO.StructInfo">
+            <summary>
+            Sub-structure describing memory allocated and used by this structure.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.STRUCT_INFO.dwAllocated">
+            <summary>
+            Size of the allocated structure, in bytes.
+            </summary>
+        </member>
+        <member name="F:Symbol.ResourceCoordination.STRUCT_INFO.dwUsed">
+            <summary>
+            Amount of memory the structure actually uses, in bytes.
+            </summary>
+        </member>
+    </members>
+</doc>

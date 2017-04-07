@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ru.nikitin.RFIDInventory.License" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIgAAAAAAAIAAAAAAAAgABABAAAAAAAABAAAACA=</HashCode>
+      <FileName>Cryptography\License.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ru.nikitin.RFIDInventory.Licenses" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQIAAAAAAAIAAAAQAEAAAQAgBAAMAAACAAAAAAkAACI=</HashCode>
+      <FileName>Cryptography\Licenses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ru.nikitin.RFIDInventory.Dispatcher" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIAARAAAASIFAiCAUQIAAAgAAQACABAABQCADoAACBI=</HashCode>
+      <FileName>Dispatcher.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ru.nikitin.RFIDInventory.MainForm" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>F+NhHSE4SC2AJ0GIhiDQEKQXEKiqPA4LhBwB8CDhCQI=</HashCode>
+      <FileName>Forms\MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ru.nikitin.RFIDInventory.PasswordForm" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACEAAAQABACAAQACAKAAAAAAgAAEAAAEAAA=</HashCode>
+      <FileName>Forms\PasswordForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ru.nikitin.RFIDInventory.MotorolaDevice" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACgAQIAEQAgBYQAAABAAIIBAAAAABABARAA=</HashCode>
+      <FileName>MotorolaDevice.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ru.nikitin.RFIDInventory.NordicIdDevice" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACACAAQGAAQIAMAAgBQQgCABgCAIJAAAAABABAQAA=</HashCode>
+      <FileName>NordicIdDevice.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ru.nikitin.RFIDInventory.NordicKeyLightWave" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAACACEABIAAAAABAAAgAAQEAIFAAAACAAACAAQ=</HashCode>
+      <FileName>NordicKeyLightWave.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ru.nikitin.RFIDInventory.Program" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ru.nikitin.RFIDInventory.SingleInstanceApplication" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAACAAAAAgAAAAAAI=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ru.nikitin.RFIDInventory.RLTag" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAIAAAAAAAAAAAAAAAAAAAAAAQAgAAAAQAA=</HashCode>
+      <FileName>RLTag.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ru.nikitin.RFIDInventory.Tools" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABCAAAAAAgQAAAIAAAAABAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Tools.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="jp.takel.PseudoRandom.MersenneTwister" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ggECAAICAAAAAQgAgAAACAQAAAAAAAQACAAAABIECAA=</HashCode>
+      <FileName>Cryptography\MersenneTwister.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ru.nikitin.RFIDInventory.DataModel.TextDataAdapter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAIGAQAIAAEIYgQASAAAgQCAAEEAAAQAQQAAI=</HashCode>
+      <FileName>DataModel\TextDataAdapter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ru.nikitin.RFIDInventory.DataModel.TextDataBase" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAKAAAAAACAAAAAAAAAAAAAAAAAACAgAAAAA=</HashCode>
+      <FileName>DataModel\TextDataBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ru.nikitin.RFIDInventory.Forms.LocationForm" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAGQAAAAABACAAAAGAIAAIAAAAAAFAAAAAIA=</HashCode>
+      <FileName>Forms\LocationForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ru.nikitin.RFIDInventory.Forms.ObjectForm" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ICEAAACAACAAhAAABQCAAAAGAKQAIAAAAAIEAAAAAAA=</HashCode>
+      <FileName>Forms\ObjectForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ru.nikitin.RFIDInventory.Properties.Resources" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACFCiQmAQEBMBwQKjyEBkagGIa4ABIAABBBAEAEhCIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ru.nikitin.RFIDInventory.ITag" Collapsed="true">
+    <Position X="2.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAIAAAAAAAAAAAAAAAAAAAAAAQAAAAAAQAA=</HashCode>
+      <FileName>Interfaces\Tag.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ru.nikitin.RFIDInventory.Interfaces.IDevice" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQIAEAAABAAAAABAAAIBAAAAAAABAQAA=</HashCode>
+      <FileName>Interfaces\Device.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="ru.nikitin.RFIDInventory.LicenseResponse" Collapsed="true">
+    <Position X="7.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAIAAAAAAAAAAABCAAAAA=</HashCode>
+      <FileName>Cryptography\License.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ru.nikitin.RFIDInventory.ApplicationState" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAIAAAAAAAAAAAAAJAIAAAAAAAA=</HashCode>
+      <FileName>Dispatcher.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ru.nikitin.RFIDInventory.TagType" Collapsed="true">
+    <Position X="2.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAIAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Interfaces\Tag.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ru.nikitin.RFIDInventory.BeepType" Collapsed="true">
+    <Position X="2.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgIAAAgAAAggEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tools.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ru.nikitin.RFIDInventory.Interfaces.Response" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAIAAAAAABA=</HashCode>
+      <FileName>Interfaces\Device.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ru.nikitin.RFIDInventory.Interfaces.DeviceVendor" Collapsed="true">
+    <Position X="4" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Interfaces\Device.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ru.nikitin.RFIDInventory.Interfaces.LedColor" Collapsed="true">
+    <Position X="5.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAhAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Interfaces\Device.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="ru.nikitin.RFIDInventory.Interfaces.DeviceConnectedDelegate" Collapsed="true">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Device.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="ru.nikitin.RFIDInventory.Interfaces.ProcessTagDelegate" Collapsed="true">
+    <Position X="2.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\Device.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

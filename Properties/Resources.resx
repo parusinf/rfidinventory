@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btCancelExit" xml:space="preserve">
+    <value>&lt; Выход</value>
+    <comment>&lt; Edit</comment>
+  </data>
+  <data name="btCancelLocations" xml:space="preserve">
+    <value>Помещения</value>
+    <comment>Locations</comment>
+  </data>
+  <data name="btCancelSheets" xml:space="preserve">
+    <value>&lt; Описи</value>
+    <comment>&lt; Sheets</comment>
+  </data>
+  <data name="btOKSelect" xml:space="preserve">
+    <value>Выбрать &gt;</value>
+    <comment>Choose &gt;</comment>
+  </data>
+  <data name="btOKSearch" xml:space="preserve">
+    <value>Поиск</value>
+    <comment>Search</comment>
+  </data>
+  <data name="lbStateChooseLocation" xml:space="preserve">
+    <value>Войдите в помещение</value>
+    <comment>Enter to location</comment>
+  </data>
+  <data name="lbStateChooseSheet" xml:space="preserve">
+    <value>Выберите опись</value>
+    <comment>Choose sheet</comment>
+  </data>
+  <data name="lbStateObjectsScanning" xml:space="preserve">
+    <value>Сканируйте объекты</value>
+    <comment>Scan objects</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Schema" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\DataSchema\Schema.xml;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btOKEnter" xml:space="preserve">
+    <value>Войти &gt;</value>
+    <comment>Enter &gt;</comment>
+  </data>
+  <data name="lbPasswordCaption" xml:space="preserve">
+    <value>Пароль </value>
+    <comment>Password</comment>
+  </data>
+  <data name="lbStateDeviceError" xml:space="preserve">
+    <value>Ошибка оборудования</value>
+    <comment>Device error</comment>
+  </data>
+  <data name="btOKStop" xml:space="preserve">
+    <value>Стоп</value>
+    <comment>Stop</comment>
+  </data>
+  <data name="btCancelClose" xml:space="preserve">
+    <value>&lt; Закрыть</value>
+    <comment>&lt; Close</comment>
+  </data>
+  <data name="lbStateAbout" xml:space="preserve">
+    <value>О программе</value>
+    <comment>About program</comment>
+  </data>
+  <data name="lbStateTagNotFound" xml:space="preserve">
+    <value>Метка не найдена</value>
+    <comment>Tag not found</comment>
+  </data>
+  <data name="lbStateWriteError" xml:space="preserve">
+    <value>Ошибка записи</value>
+    <comment>Write error</comment>
+  </data>
+  <data name="lbStateWriteSuccessful" xml:space="preserve">
+    <value>Метка записана</value>
+    <comment>The label is written</comment>
+  </data>
+  <data name="lbStateLicenseInvalidSerial" xml:space="preserve">
+    <value>Требуется лицензия</value>
+    <comment>A license is required</comment>
+  </data>
+  <data name="lbStateLicenseOutOfDate" xml:space="preserve">
+    <value>Лицензия просрочена</value>
+    <comment>License expired</comment>
+  </data>
+  <data name="lbStateCtyproException" xml:space="preserve">
+    <value>Ошибка криптографии</value>
+    <comment>Cryptography error</comment>
+  </data>
+  <data name="lbAuthor" xml:space="preserve">
+    <value>Павел Никитин © 2013</value>
+    <comment>Pavel Nikitin © 2013</comment>
+  </data>
+  <data name="lbAuthorText" xml:space="preserve">
+    <value>Разработчик:</value>
+    <comment>Developer:</comment>
+  </data>
+  <data name="lbDemo" xml:space="preserve">
+    <value>Демонстрационная версия</value>
+    <comment>Demo version</comment>
+  </data>
+  <data name="lbInCompany" xml:space="preserve">
+    <value>Организация:</value>
+    <comment>Company:</comment>
+  </data>
+  <data name="lbLicenseText" xml:space="preserve">
+    <value>Лицензия:</value>
+    <comment>License:</comment>
+  </data>
+  <data name="lbNoCompany" xml:space="preserve">
+    <value>Не определена</value>
+    <comment>Not present</comment>
+  </data>
+  <data name="lbNoSerial" xml:space="preserve">
+    <value>Не определен</value>
+    <comment>Not present</comment>
+  </data>
+  <data name="lbProgramName" xml:space="preserve">
+    <value>RFID Инвентаризация ОС</value>
+    <comment>RFIDInventory</comment>
+  </data>
+  <data name="lbDeviceSerialText" xml:space="preserve">
+    <value>Серийный номер устройства:</value>
+    <comment>Device serial number:</comment>
+  </data>
+  <data name="lbStateDatabaseError" xml:space="preserve">
+    <value>Ошибка базы данных</value>
+    <comment>Database error</comment>
+  </data>
+  <data name="lbStateLoadData" xml:space="preserve">
+    <value>Загрузка данных...</value>
+    <comment>Loading data ...</comment>
+  </data>
+  <data name="lbVersion" xml:space="preserve">
+    <value>Версия 1.2</value>
+    <comment>Version 1.2</comment>
+  </data>
+  <data name="chFindAll" xml:space="preserve">
+    <value>Поиск по всем описям</value>
+    <comment>Search in all sheets</comment>
+  </data>
+  <data name="chFound" xml:space="preserve">
+    <value>Найдено</value>
+    <comment>Found</comment>
+  </data>
+  <data name="chLocation" xml:space="preserve">
+    <value>Помещение</value>
+    <comment>Location</comment>
+  </data>
+  <data name="chLocationsBySheetPrefix" xml:space="preserve">
+    <value>Помещения</value>
+    <comment>Locations</comment>
+  </data>
+  <data name="dgcCount" xml:space="preserve">
+    <value>Кол-во</value>
+    <comment>Count</comment>
+  </data>
+  <data name="dgcLocationsName" xml:space="preserve">
+    <value>Наименование</value>
+    <comment>Name</comment>
+  </data>
+  <data name="dgcObjectsObject" xml:space="preserve">
+    <value>Инв.№, Сер.№, Номенклатура</value>
+    <comment>Inv#, Ser#, Nomenclature</comment>
+  </data>
+  <data name="dgcSheetsNumber" xml:space="preserve">
+    <value>№, Дата</value>
+    <comment>#, Date</comment>
+  </data>
+  <data name="dgcSheetsPerson" xml:space="preserve">
+    <value>МОЛ</value>
+    <comment>Person</comment>
+  </data>
+  <data name="lbAuthorContact" xml:space="preserve">
+    <value>79257977551@mail.ru</value>
+    <comment>79257977551@mail.ru</comment>
+  </data>
+  <data name="lbStateInit" xml:space="preserve">
+    <value>Инициализация...</value>
+    <comment>Initialization...</comment>
+  </data>
+  <data name="tpLocations" xml:space="preserve">
+    <value>Помещения</value>
+    <comment>Locations</comment>
+  </data>
+  <data name="tpObjects" xml:space="preserve">
+    <value>Объекты</value>
+    <comment>Objects</comment>
+  </data>
+  <data name="tpSheets" xml:space="preserve">
+    <value>Описи</value>
+    <comment>Sheets</comment>
+  </data>
+  <data name="btCancel" xml:space="preserve">
+    <value>Отмена</value>
+    <comment>Cancel</comment>
+  </data>
+  <data name="btOKWrite" xml:space="preserve">
+    <value>Записать</value>
+    <comment>Write</comment>
+  </data>
+  <data name="lbInvNumberText" xml:space="preserve">
+    <value>Инвентарный номер:</value>
+    <comment>Iventory number:</comment>
+  </data>
+  <data name="lbLocationIdText" xml:space="preserve">
+    <value>Идентификатор помещения:</value>
+    <comment>Location identificator:</comment>
+  </data>
+  <data name="lbNameText" xml:space="preserve">
+    <value>Наименование помещения:</value>
+    <comment>Location name</comment>
+  </data>
+  <data name="lbNomenclaruteText" xml:space="preserve">
+    <value>Наименование номенклатуры:</value>
+    <comment>Nomenclature name:</comment>
+  </data>
+  <data name="lbObjectIdText" xml:space="preserve">
+    <value>Идентификатор объекта:</value>
+    <comment>Object identificator:</comment>
+  </data>
+  <data name="lbSerialText" xml:space="preserve">
+    <value>Серийный номер:</value>
+    <comment>Serial number:</comment>
+  </data>
+  <data name="lbStateObject" xml:space="preserve">
+    <value>Объект</value>
+    <comment>Object</comment>
+  </data>
+  <data name="lbWrongPassword" xml:space="preserve">
+    <value>Ошибочный пароль</value>
+    <comment>Wrong password</comment>
+  </data>
+  <data name="lbStateStateAlreadyFound" xml:space="preserve">
+    <value>Объект найден ранее</value>
+    <comment>Object already found</comment>
+  </data>
+  <data name="lbStateStateFound" xml:space="preserve">
+    <value>Объект найден</value>
+    <comment>Object found</comment>
+  </data>
+  <data name="lbStateStateNotFound" xml:space="preserve">
+    <value>Объект не загружен</value>
+    <comment>Object not found</comment>
+  </data>
+  <data name="lbStateStateNotValid" xml:space="preserve">
+    <value>Объект не распознан</value>
+    <comment>Object not recognized</comment>
+  </data>
+</root>
