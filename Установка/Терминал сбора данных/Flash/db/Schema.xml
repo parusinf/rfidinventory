@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<xs:schema xmlns=""
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+
+  <!-- Inventory data set structure -->
+  <xs:element name="InventoryDataSet" msdata:IsDataSet="true">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+
+        <!-- Parameters -->
+        <xs:element name="Parameters">
+          <xs:complexType>
+            <xs:sequence>
+
+              <!-- Company identificator encoded in ASCII (12 digits) -->
+              <xs:element name="companyId" type ="xs:unsignedLong" />
+
+              <!-- Company name -->
+              <xs:element name="companyName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <!-- User can write tags -->
+              <xs:element name="canWrite" type="xs:boolean" />
+
+              <!-- Inventory upload date in dd.MM.yyyy HH:mm.ss -->
+              <xs:element name="dateTime" type="xs:dateTime" />
+
+              <!-- Password is nullable -->
+              <xs:element name="password" nillable="true">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- Locations -->
+        <xs:element name="Locations">
+          <xs:complexType>
+            <xs:sequence>
+              
+              <!-- unique RFID of location encoded in ASCII (12 digits) -->
+              <xs:element name="id" type ="xs:unsignedLong" />
+
+              <!-- Location name -->
+              <xs:element name="name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- Stock sheets -->
+        <xs:element name="Sheets">
+          <xs:complexType>
+            <xs:sequence>
+
+              <!-- Stock sheet number encoded in ASCII (12 digits) -->
+              <xs:element name="number" type="xs:unsignedLong" />
+ 
+              <!-- Stock sheet date -->
+              <xs:element name="date">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <!-- Person -->
+              <xs:element name="personCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <!-- Password is nullable -->
+              <xs:element name="password" nillable="true">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- Inventory document specification is ReadOnly for using ArrayIndex -->
+        <xs:element name="Objects">
+          <xs:complexType>
+            <xs:sequence>
+
+              <!-- unique RFID of object encoded in ASCII (12 digits) -->
+              <xs:element name="id" type ="xs:unsignedLong" msdata:ReadOnly="true" />
+
+              <!-- Stock sheet number encoded in ASCII (12 digits) -->
+              <xs:element name="sheetNumber" type="xs:unsignedLong" />
+
+              <!-- Inventory number of the accounting system -->
+              <xs:element name="inventoryNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              
+              <!-- Nomenclature name -->
+              <xs:element name="nomenclatureName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="160"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <!-- Serial number -->
+              <xs:element name="serialNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <!-- Reference to the location -->
+              <xs:element name="locationId" type ="xs:unsignedLong" />
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <!-- Inventory cardfile -->
+        <xs:element name="ObjectsFound">
+          <xs:complexType>
+            <xs:sequence>
+
+              <!-- unique RFID of object encoded in ASCII (12 digits) -->
+              <xs:element name="id" type ="xs:unsignedLong" />
+
+              <!-- Stock sheet number encoded in ASCII (12 digits) -->
+              <xs:element name="sheetNumber" type="xs:unsignedLong" />
+
+              <!-- Found date in dd.MM.yyyy HH:mm.ss -->
+              <xs:element name="dateTime" type="xs:dateTime" />
+
+              <!-- Reference to the location -->
+              <xs:element name="locationId" type ="xs:unsignedLong" />
+
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:choice>
+    </xs:complexType>
+
+    <!-- Primary Keys -->
+    <xs:key name="LocationsPK" msdata:PrimaryKey="true" >
+      <xs:selector xpath=".//Locations" />
+      <xs:field xpath="id" />
+    </xs:key>
+
+    <xs:key name="SheetsPK" msdata:PrimaryKey="true" >
+      <xs:selector xpath=".//Sheets" />
+      <xs:field xpath="number" />
+    </xs:key>
+
+    <xs:key name="ObjectsPK" msdata:PrimaryKey="true" >
+      <xs:selector xpath=".//Objects" />
+      <xs:field xpath="id" />
+    </xs:key>
+
+    <xs:key name="ObjectsFoundPK" msdata:PrimaryKey="true" >
+      <xs:selector xpath=".//ObjectsFound" />
+      <xs:field xpath="id" />
+    </xs:key>
+
+    <!-- Objects Foreign Keys-->
+    <xs:keyref name="ObjectsSheetsFK" refer="SheetsPK">
+      <xs:selector xpath=".//Objects" />
+      <xs:field xpath="sheetNumber" />
+    </xs:keyref>
+
+    <xs:keyref name="ObjectsLocationsFK" refer="LocationsPK">
+      <xs:selector xpath=".//Objects" />
+      <xs:field xpath="locationId" />
+    </xs:keyref>
+
+    <!-- ObjectsFound Foreign Keys-->
+    <xs:keyref name="ObjectsFoundSheetsFK" refer="SheetsPK">
+      <xs:selector xpath=".//ObjectsFound" />
+      <xs:field xpath="sheetNumber" />
+    </xs:keyref>
+
+    <xs:keyref name="ObjectsFoundLocationFK" refer="LocationsPK">
+      <xs:selector xpath=".//ObjectsFound" />
+      <xs:field xpath="locationId" />
+    </xs:keyref>
+
+    <xs:keyref name="ObjectsFoundFK" refer="ObjectsPK">
+      <xs:selector xpath=".//ObjectsFound" />
+      <xs:field xpath="id" />
+    </xs:keyref>
+
+  </xs:element>
+</xs:schema>
