@@ -1,5 +1,7 @@
 # RFID Инвентаризация ОС
-Свидетельство о государственной регистрации программы для ЭВМ № 2013613741
+Свидетельство о государственной регистрации программы для ЭВМ № 2013613741 [поиск по номеру](http://www1.fips.ru/wps/portal/!ut/p/c5/jY5bDoIwFETXwgp6KQj8FtQWhcpDFPpDMBoCkUcCgcjqhQWAznxOzuQggebW2VDkWV80dfZGMRJaatvEY2cqwwW7AMTgETmeNAxUmfdESy1KmKo7AJQHFtiqqWJGTQy28g8NKyHwg76jGNQ0LI3W_fSxM1nDtZx8zKcD7ve-3OnW6PKH97wFkUnINIgunxmxvG4ZL_uGE2dN9UIJEvqaGw13qK2iaGjZmBNJ-gLouRr9/dl3/d3/L0lDU0lKSmdwcGlRb0tVUW9LVVEhL29Gb2dBRUlRaGpFQ1VJZ0FFQUl5RkFNaHdVaFM0SldsYTRvIS80QzFiOVdfTnIwZ0NVZ3hFbVJDVXdwTWhFcFJBLzdfSUlBUEhLRzEwTzJNMDBBOE5VQUZKNjJHUzUvMzY4cEs2MzM4MDEzNy8zNzQzMTk1ODAyNzEvYWNOYW1lL2NsaWNrUmVnaXN0ZXIvcmVnTmFtZS9FVk0!/)
+
+[RFID Инвентаризация ОС](https://reestr.minsvyaz.ru/reestr/120832/?sphrase_id=93790) включена в Реестр по Приказу Минкомсвязи РФ от 07.12.2017 №680, Приложение 1, №пп.5, реестровый № 3974.
 
 ## 1. Область применения
 ### 1.1. Предназначение
