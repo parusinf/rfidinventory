@@ -1,7 +1,17 @@
 # RFID Инвентаризация ОС
-Свидетельство о государственной регистрации программы для ЭВМ № 2013613741 [поиск по номеру](http://www1.fips.ru/wps/portal/!ut/p/c5/jY5bDoIwFETXwgp6KQj8FtQWhcpDFPpDMBoCkUcCgcjqhQWAznxOzuQggebW2VDkWV80dfZGMRJaatvEY2cqwwW7AMTgETmeNAxUmfdESy1KmKo7AJQHFtiqqWJGTQy28g8NKyHwg76jGNQ0LI3W_fSxM1nDtZx8zKcD7ve-3OnW6PKH97wFkUnINIgunxmxvG4ZL_uGE2dN9UIJEvqaGw13qK2iaGjZmBNJ-gLouRr9/dl3/d3/L0lDU0lKSmdwcGlRb0tVUW9LVVEhL29Gb2dBRUlRaGpFQ1VJZ0FFQUl5RkFNaHdVaFM0SldsYTRvIS80QzFiOVdfTnIwZ0NVZ3hFbVJDVXdwTWhFcFJBLzdfSUlBUEhLRzEwTzJNMDBBOE5VQUZKNjJHUzUvMzY4cEs2MzM4MDEzNy8zNzQzMTk1ODAyNzEvYWNOYW1lL2NsaWNrUmVnaXN0ZXIvcmVnTmFtZS9FVk0!/)
 
-[RFID Инвентаризация ОС](https://reestr.minsvyaz.ru/reestr/120832/?sphrase_id=93790) включена в Реестр по Приказу Минкомсвязи РФ от 07.12.2017 №680, Приложение 1, №пп.5, реестровый № 3974.
+## Как пользоваться
+![Выберите опись](screenshot1.png)
+
+Выберите опись, введите пароль, если он был установлен. Установите флаг «Поиск по всем описям», тогда сканер будет видеть объекты всех загруженных описей, инвертаризация пойдёт веселее.
+
+![Войдите в помещение](screenshot2.png)
+
+Отсканируйте метку помещения или выберите его вручную. Для выбора другой описи нажмите «Описи».
+
+![Сканируйте объекты](screenshot3.png)
+
+Сканируйте объекты в выбранном помещении. Для перехода в другое помещение нажмите «Помещения».
 
 ## 1. Область применения
 ### 1.1. Предназначение
@@ -50,3 +60,9 @@
 * ГОСТ 34.201-89. Информационная технология. Комплекс стандартов на автоматизированные системы. Виды, комплексность и обозначение документов при создании автоматизированных систем.
 * РД 50-34.698-90. Информационная технология. Комплекс стандартов и руководящих документов на автоматизированные системы. Требования к содержанию документов.
 * ГОСТ 34.603-92. Информационная технология. Виды испытаний автоматизированных систем.
+
+## 6. Ссылки на реестры
+
+Единый реестр российских программ [RFID Инвентаризация ОС](https://reestr.minsvyaz.ru/reestr/120832/)
+
+Свидетельство о государственной регистрации программы для ЭВМ [поиск по номеру](http://www1.fips.ru/wps/portal/!ut/p/c5/jY5NDoIwGESP1I_SIC5L0bYKFYEqsiEkGgORHyPBwOmFA4jOLCdv8lCKptZ5X9zzrmjq_IESlFqZlDQQe27AAfsA1FaabncWBm5O-8XKGKeCrDwArkIGkjgEC-5gkOY_NHwJhR_0GSVAsqi0W3_oEm9kfVyOR6zGDe7cyPBdOqh1HFxPoXYoG8jr2U9MOr8uGc_7gpMSTXVDbaV134r3BxGsAoA!/dl3/d3/L0lDU0lKSkthWWtLQ2xFS0NsRUpJL29Eb2dBRUlRaGpCS0VRQUNBRVpDZ0dRNEtRcGNFclN0Y1ZhQ0FHTUEvNEMxYjlXX05yeFFERVNaSUpSQ2t5WVNoRVJJX0FBISEvN19JSUFQSEtHMTBPMk0wMEE4TlVBRko2MkdTNS8zODM1MDc4NDUwOTUvYWNOYW1lL2NsaWNrUmVnaXN0ZXIvcmVnTmFtZS9FVk0!/) **2013613741**
