@@ -80,4 +80,4 @@
 
 Единый реестр российских программ [RFID Инвентаризация ОС](https://reestr.minsvyaz.ru/reestr/120832/)
 
-Свидетельство о государственной регистрации программы для ЭВМ [поиск по номеру](http://www1.fips.ru/wps/portal/!ut/p/c5/jY5NDoIwGESP1I_SIC5L0bYKFYEqsiEkGgORHyPBwOmFA4jOLCdv8lCKptZ5X9zzrmjq_IESlFqZlDQQe27AAfsA1FaabncWBm5O-8XKGKeCrDwArkIGkjgEC-5gkOY_NHwJhR_0GSVAsqi0W3_oEm9kfVyOR6zGDe7cyPBdOqh1HFxPoXYoG8jr2U9MOr8uGc_7gpMSTXVDbaV134r3BxGsAoA!/dl3/d3/L0lDU0lKSkthWWtLQ2xFS0NsRUpJL29Eb2dBRUlRaGpCS0VRQUNBRVpDZ0dRNEtRcGNFclN0Y1ZhQ0FHTUEvNEMxYjlXX05yeFFERVNaSUpSQ2t5WVNoRVJJX0FBISEvN19JSUFQSEtHMTBPMk0wMEE4TlVBRko2MkdTNS8zODM1MDc4NDUwOTUvYWNOYW1lL2NsaWNrUmVnaXN0ZXIvcmVnTmFtZS9FVk0!/) **2013613741**
+[Свидетельство о государственной регистрации программы для ЭВМ](http://www1.fips.ru/iiss/document.xhtml?faces-redirect=true&id=3af10253fabc6b33ff072f2cdab7e98a)
