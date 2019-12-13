@@ -80,4 +80,4 @@
 
 Единый реестр российских программ [RFID Инвентаризация ОС](https://reestr.minsvyaz.ru/reestr/120832/)
 
-[Свидетельство о государственной регистрации программы для ЭВМ](http://www1.fips.ru/iiss/document.xhtml?faces-redirect=true&id=3af10253fabc6b33ff072f2cdab7e98a)
+[Свидетельство о государственной регистрации программы для ЭВМ](https://www1.fips.ru/iiss/document.xhtml?faces-redirect=true&id=3af10253fabc6b33ff072f2cdab7e98a)
